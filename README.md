@@ -1,0 +1,2 @@
+# Karty-WOJNA
+.NET C#
