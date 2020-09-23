@@ -29,7 +29,6 @@ namespace KartyWojna
                 Players[j].Cards.Add(card);
                 j++;
             }
-            Talia.Cards.Clear();                                         //Wyczyszczenie talii po rozdaniu kart
 
             funkcje.Play(limitrund,Players);                             //Rozpoczęcie rozgrywki
 
