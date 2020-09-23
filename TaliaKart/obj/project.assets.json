@@ -186,11 +186,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jankm\\source\\repos\\KartyWojna\\TaliaKart\\TaliaKart.csproj",
+      "projectUniqueName": "D:\\git\\INT3RCEPT0R\\Karty-WOJNA\\TaliaKart\\TaliaKart.csproj",
       "projectName": "TaliaKart",
-      "projectPath": "C:\\Users\\jankm\\source\\repos\\KartyWojna\\TaliaKart\\TaliaKart.csproj",
+      "projectPath": "D:\\git\\INT3RCEPT0R\\Karty-WOJNA\\TaliaKart\\TaliaKart.csproj",
       "packagesPath": "C:\\Users\\jankm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jankm\\source\\repos\\KartyWojna\\TaliaKart\\obj\\",
+      "outputPath": "D:\\git\\INT3RCEPT0R\\Karty-WOJNA\\TaliaKart\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Microsoft\\Xamarin\\NuGet\\"

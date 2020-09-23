@@ -12,3 +12,17 @@ C:\Users\jankm\source\repos\KartyWojna\Rozgrywka\obj\Debug\netstandard2.0\Rozgry
 C:\Users\jankm\source\repos\KartyWojna\Rozgrywka\obj\Debug\netstandard2.0\Rozgrywka.csproj.CopyComplete
 C:\Users\jankm\source\repos\KartyWojna\Rozgrywka\obj\Debug\netstandard2.0\Rozgrywka.dll
 C:\Users\jankm\source\repos\KartyWojna\Rozgrywka\obj\Debug\netstandard2.0\Rozgrywka.pdb
+D:\git\INT3RCEPT0R\Karty-WOJNA\Rozgrywka\bin\Debug\netstandard2.0\Rozgrywka.deps.json
+D:\git\INT3RCEPT0R\Karty-WOJNA\Rozgrywka\bin\Debug\netstandard2.0\Rozgrywka.dll
+D:\git\INT3RCEPT0R\Karty-WOJNA\Rozgrywka\bin\Debug\netstandard2.0\Rozgrywka.pdb
+D:\git\INT3RCEPT0R\Karty-WOJNA\Rozgrywka\bin\Debug\netstandard2.0\TaliaKart.dll
+D:\git\INT3RCEPT0R\Karty-WOJNA\Rozgrywka\bin\Debug\netstandard2.0\Uczestnicy.dll
+D:\git\INT3RCEPT0R\Karty-WOJNA\Rozgrywka\bin\Debug\netstandard2.0\TaliaKart.pdb
+D:\git\INT3RCEPT0R\Karty-WOJNA\Rozgrywka\bin\Debug\netstandard2.0\Uczestnicy.pdb
+D:\git\INT3RCEPT0R\Karty-WOJNA\Rozgrywka\obj\Debug\netstandard2.0\Rozgrywka.csprojAssemblyReference.cache
+D:\git\INT3RCEPT0R\Karty-WOJNA\Rozgrywka\obj\Debug\netstandard2.0\Rozgrywka.AssemblyInfoInputs.cache
+D:\git\INT3RCEPT0R\Karty-WOJNA\Rozgrywka\obj\Debug\netstandard2.0\Rozgrywka.AssemblyInfo.cs
+D:\git\INT3RCEPT0R\Karty-WOJNA\Rozgrywka\obj\Debug\netstandard2.0\Rozgrywka.csproj.CoreCompileInputs.cache
+D:\git\INT3RCEPT0R\Karty-WOJNA\Rozgrywka\obj\Debug\netstandard2.0\Rozgrywka.csproj.CopyComplete
+D:\git\INT3RCEPT0R\Karty-WOJNA\Rozgrywka\obj\Debug\netstandard2.0\Rozgrywka.dll
+D:\git\INT3RCEPT0R\Karty-WOJNA\Rozgrywka\obj\Debug\netstandard2.0\Rozgrywka.pdb

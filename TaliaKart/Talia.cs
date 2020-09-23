@@ -64,11 +64,29 @@ namespace TaliaKart
                 return NamedValue + " of " + Suite.ToString();
             }
         }
-
+        public Card()
+        {
+        }
         public Card(int Value, Suites Suite)
         {
             this.Value = Value;
             this.Suite = Suite;
+        }
+
+        private static Random rng = new Random();
+        public static List<Card> MixCards(List<Card> karty)
+        {
+            List<Card> list = karty;
+            int n = list.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                Card value = list[k];
+                list[k] = list[n];
+                list[n] = value;
+            }
+            return list;
         }
     }
 
@@ -88,21 +106,7 @@ namespace TaliaKart
                 int val = i % 13 + 2;
                 Cards.Add(new Card(val, suite));
             }
-        }
-        private static Random rng = new Random();
-        public void MixDeck()
-        {
-            List<Card> list = this.Cards;
-            int n = list.Count;
-            while (n > 1)
-            {
-                n--;
-                int k = rng.Next(n + 1);
-                Card value = list[k];
-                list[k] = list[n];
-                list[n] = value;
-            }
-        }
+        }      
 
         public void PrintDeck()
         {

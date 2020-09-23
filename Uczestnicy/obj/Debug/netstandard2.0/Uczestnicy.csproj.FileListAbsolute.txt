@@ -10,3 +10,15 @@ C:\Users\jankm\source\repos\KartyWojna\Uczestnicy\obj\Debug\netstandard2.0\Uczes
 C:\Users\jankm\source\repos\KartyWojna\Uczestnicy\obj\Debug\netstandard2.0\Uczestnicy.csproj.CopyComplete
 C:\Users\jankm\source\repos\KartyWojna\Uczestnicy\obj\Debug\netstandard2.0\Uczestnicy.dll
 C:\Users\jankm\source\repos\KartyWojna\Uczestnicy\obj\Debug\netstandard2.0\Uczestnicy.pdb
+D:\git\INT3RCEPT0R\Karty-WOJNA\Uczestnicy\bin\Debug\netstandard2.0\Uczestnicy.deps.json
+D:\git\INT3RCEPT0R\Karty-WOJNA\Uczestnicy\bin\Debug\netstandard2.0\Uczestnicy.dll
+D:\git\INT3RCEPT0R\Karty-WOJNA\Uczestnicy\bin\Debug\netstandard2.0\Uczestnicy.pdb
+D:\git\INT3RCEPT0R\Karty-WOJNA\Uczestnicy\bin\Debug\netstandard2.0\TaliaKart.dll
+D:\git\INT3RCEPT0R\Karty-WOJNA\Uczestnicy\bin\Debug\netstandard2.0\TaliaKart.pdb
+D:\git\INT3RCEPT0R\Karty-WOJNA\Uczestnicy\obj\Debug\netstandard2.0\Uczestnicy.csprojAssemblyReference.cache
+D:\git\INT3RCEPT0R\Karty-WOJNA\Uczestnicy\obj\Debug\netstandard2.0\Uczestnicy.AssemblyInfoInputs.cache
+D:\git\INT3RCEPT0R\Karty-WOJNA\Uczestnicy\obj\Debug\netstandard2.0\Uczestnicy.AssemblyInfo.cs
+D:\git\INT3RCEPT0R\Karty-WOJNA\Uczestnicy\obj\Debug\netstandard2.0\Uczestnicy.csproj.CoreCompileInputs.cache
+D:\git\INT3RCEPT0R\Karty-WOJNA\Uczestnicy\obj\Debug\netstandard2.0\Uczestnicy.csproj.CopyComplete
+D:\git\INT3RCEPT0R\Karty-WOJNA\Uczestnicy\obj\Debug\netstandard2.0\Uczestnicy.dll
+D:\git\INT3RCEPT0R\Karty-WOJNA\Uczestnicy\obj\Debug\netstandard2.0\Uczestnicy.pdb

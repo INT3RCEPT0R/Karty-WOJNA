@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jankm\\source\\repos\\KartyWojna\\Uczestnicy\\Uczestnicy.csproj": {}
+    "D:\\git\\INT3RCEPT0R\\Karty-WOJNA\\Uczestnicy\\Uczestnicy.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jankm\\source\\repos\\KartyWojna\\TaliaKart\\TaliaKart.csproj": {
+    "D:\\git\\INT3RCEPT0R\\Karty-WOJNA\\TaliaKart\\TaliaKart.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jankm\\source\\repos\\KartyWojna\\TaliaKart\\TaliaKart.csproj",
+        "projectUniqueName": "D:\\git\\INT3RCEPT0R\\Karty-WOJNA\\TaliaKart\\TaliaKart.csproj",
         "projectName": "TaliaKart",
-        "projectPath": "C:\\Users\\jankm\\source\\repos\\KartyWojna\\TaliaKart\\TaliaKart.csproj",
+        "projectPath": "D:\\git\\INT3RCEPT0R\\Karty-WOJNA\\TaliaKart\\TaliaKart.csproj",
         "packagesPath": "C:\\Users\\jankm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jankm\\source\\repos\\KartyWojna\\TaliaKart\\obj\\",
+        "outputPath": "D:\\git\\INT3RCEPT0R\\Karty-WOJNA\\TaliaKart\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Microsoft\\Xamarin\\NuGet\\"
@@ -63,14 +63,14 @@
         }
       }
     },
-    "C:\\Users\\jankm\\source\\repos\\KartyWojna\\Uczestnicy\\Uczestnicy.csproj": {
+    "D:\\git\\INT3RCEPT0R\\Karty-WOJNA\\Uczestnicy\\Uczestnicy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jankm\\source\\repos\\KartyWojna\\Uczestnicy\\Uczestnicy.csproj",
+        "projectUniqueName": "D:\\git\\INT3RCEPT0R\\Karty-WOJNA\\Uczestnicy\\Uczestnicy.csproj",
         "projectName": "Uczestnicy",
-        "projectPath": "C:\\Users\\jankm\\source\\repos\\KartyWojna\\Uczestnicy\\Uczestnicy.csproj",
+        "projectPath": "D:\\git\\INT3RCEPT0R\\Karty-WOJNA\\Uczestnicy\\Uczestnicy.csproj",
         "packagesPath": "C:\\Users\\jankm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jankm\\source\\repos\\KartyWojna\\Uczestnicy\\obj\\",
+        "outputPath": "D:\\git\\INT3RCEPT0R\\Karty-WOJNA\\Uczestnicy\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Microsoft\\Xamarin\\NuGet\\"
@@ -90,8 +90,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\jankm\\source\\repos\\KartyWojna\\TaliaKart\\TaliaKart.csproj": {
-                "projectPath": "C:\\Users\\jankm\\source\\repos\\KartyWojna\\TaliaKart\\TaliaKart.csproj"
+              "D:\\git\\INT3RCEPT0R\\Karty-WOJNA\\TaliaKart\\TaliaKart.csproj": {
+                "projectPath": "D:\\git\\INT3RCEPT0R\\Karty-WOJNA\\TaliaKart\\TaliaKart.csproj"
               }
             }
           }

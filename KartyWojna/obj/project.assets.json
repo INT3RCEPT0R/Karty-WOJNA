@@ -72,11 +72,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jankm\\source\\repos\\KartyWojna\\KartyWojna\\KartyWojna.csproj",
+      "projectUniqueName": "D:\\git\\INT3RCEPT0R\\Karty-WOJNA\\KartyWojna\\KartyWojna.csproj",
       "projectName": "KartyWojna",
-      "projectPath": "C:\\Users\\jankm\\source\\repos\\KartyWojna\\KartyWojna\\KartyWojna.csproj",
+      "projectPath": "D:\\git\\INT3RCEPT0R\\Karty-WOJNA\\KartyWojna\\KartyWojna.csproj",
       "packagesPath": "C:\\Users\\jankm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jankm\\source\\repos\\KartyWojna\\KartyWojna\\obj\\",
+      "outputPath": "D:\\git\\INT3RCEPT0R\\Karty-WOJNA\\KartyWojna\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Microsoft\\Xamarin\\NuGet\\"
@@ -96,14 +96,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\jankm\\source\\repos\\KartyWojna\\Rozgrywka\\Rozgrywka.csproj": {
-              "projectPath": "C:\\Users\\jankm\\source\\repos\\KartyWojna\\Rozgrywka\\Rozgrywka.csproj"
+            "D:\\git\\INT3RCEPT0R\\Karty-WOJNA\\Rozgrywka\\Rozgrywka.csproj": {
+              "projectPath": "D:\\git\\INT3RCEPT0R\\Karty-WOJNA\\Rozgrywka\\Rozgrywka.csproj"
             },
-            "C:\\Users\\jankm\\source\\repos\\KartyWojna\\TaliaKart\\TaliaKart.csproj": {
-              "projectPath": "C:\\Users\\jankm\\source\\repos\\KartyWojna\\TaliaKart\\TaliaKart.csproj"
+            "D:\\git\\INT3RCEPT0R\\Karty-WOJNA\\TaliaKart\\TaliaKart.csproj": {
+              "projectPath": "D:\\git\\INT3RCEPT0R\\Karty-WOJNA\\TaliaKart\\TaliaKart.csproj"
             },
-            "C:\\Users\\jankm\\source\\repos\\KartyWojna\\Uczestnicy\\Uczestnicy.csproj": {
-              "projectPath": "C:\\Users\\jankm\\source\\repos\\KartyWojna\\Uczestnicy\\Uczestnicy.csproj"
+            "D:\\git\\INT3RCEPT0R\\Karty-WOJNA\\Uczestnicy\\Uczestnicy.csproj": {
+              "projectPath": "D:\\git\\INT3RCEPT0R\\Karty-WOJNA\\Uczestnicy\\Uczestnicy.csproj"
             }
           }
         }

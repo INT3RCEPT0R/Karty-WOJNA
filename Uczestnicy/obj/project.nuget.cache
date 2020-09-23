@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ckd+Ug9L1w60m2HHFgzm0H+JUNSNbbm73p+b9czuAEQls+yQsfM2IHrKvMloGl/IP+8eQfVPEEcqzTyJDcswAg==",
+  "dgSpecHash": "f/ZLeyGTYYr20NCHx461SZw5tB8y9g8StRZScxef0U0lFh4Ykw8+gIKKVwfoilGtQIomZfvac0G3z+aRwNfRwg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jankm\\source\\repos\\KartyWojna\\Uczestnicy\\Uczestnicy.csproj",
+  "projectFilePath": "D:\\git\\INT3RCEPT0R\\Karty-WOJNA\\Uczestnicy\\Uczestnicy.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jankm\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\jankm\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

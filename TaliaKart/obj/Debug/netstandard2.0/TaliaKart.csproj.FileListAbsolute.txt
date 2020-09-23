@@ -7,3 +7,12 @@ C:\Users\jankm\source\repos\KartyWojna\TaliaKart\bin\Debug\netstandard2.0\TaliaK
 C:\Users\jankm\source\repos\KartyWojna\TaliaKart\bin\Debug\netstandard2.0\TaliaKart.pdb
 C:\Users\jankm\source\repos\KartyWojna\TaliaKart\obj\Debug\netstandard2.0\TaliaKart.dll
 C:\Users\jankm\source\repos\KartyWojna\TaliaKart\obj\Debug\netstandard2.0\TaliaKart.pdb
+D:\git\INT3RCEPT0R\Karty-WOJNA\TaliaKart\bin\Debug\netstandard2.0\TaliaKart.deps.json
+D:\git\INT3RCEPT0R\Karty-WOJNA\TaliaKart\bin\Debug\netstandard2.0\TaliaKart.dll
+D:\git\INT3RCEPT0R\Karty-WOJNA\TaliaKart\bin\Debug\netstandard2.0\TaliaKart.pdb
+D:\git\INT3RCEPT0R\Karty-WOJNA\TaliaKart\obj\Debug\netstandard2.0\TaliaKart.csprojAssemblyReference.cache
+D:\git\INT3RCEPT0R\Karty-WOJNA\TaliaKart\obj\Debug\netstandard2.0\TaliaKart.AssemblyInfoInputs.cache
+D:\git\INT3RCEPT0R\Karty-WOJNA\TaliaKart\obj\Debug\netstandard2.0\TaliaKart.AssemblyInfo.cs
+D:\git\INT3RCEPT0R\Karty-WOJNA\TaliaKart\obj\Debug\netstandard2.0\TaliaKart.csproj.CoreCompileInputs.cache
+D:\git\INT3RCEPT0R\Karty-WOJNA\TaliaKart\obj\Debug\netstandard2.0\TaliaKart.dll
+D:\git\INT3RCEPT0R\Karty-WOJNA\TaliaKart\obj\Debug\netstandard2.0\TaliaKart.pdb
