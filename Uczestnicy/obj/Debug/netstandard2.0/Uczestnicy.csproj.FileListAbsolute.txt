@@ -1,0 +1,12 @@
+C:\Users\jankm\source\repos\KartyWojna\Uczestnicy\bin\Debug\netstandard2.0\Uczestnicy.deps.json
+C:\Users\jankm\source\repos\KartyWojna\Uczestnicy\bin\Debug\netstandard2.0\Uczestnicy.dll
+C:\Users\jankm\source\repos\KartyWojna\Uczestnicy\bin\Debug\netstandard2.0\Uczestnicy.pdb
+C:\Users\jankm\source\repos\KartyWojna\Uczestnicy\bin\Debug\netstandard2.0\TaliaKart.dll
+C:\Users\jankm\source\repos\KartyWojna\Uczestnicy\bin\Debug\netstandard2.0\TaliaKart.pdb
+C:\Users\jankm\source\repos\KartyWojna\Uczestnicy\obj\Debug\netstandard2.0\Uczestnicy.csprojAssemblyReference.cache
+C:\Users\jankm\source\repos\KartyWojna\Uczestnicy\obj\Debug\netstandard2.0\Uczestnicy.AssemblyInfoInputs.cache
+C:\Users\jankm\source\repos\KartyWojna\Uczestnicy\obj\Debug\netstandard2.0\Uczestnicy.AssemblyInfo.cs
+C:\Users\jankm\source\repos\KartyWojna\Uczestnicy\obj\Debug\netstandard2.0\Uczestnicy.csproj.CoreCompileInputs.cache
+C:\Users\jankm\source\repos\KartyWojna\Uczestnicy\obj\Debug\netstandard2.0\Uczestnicy.csproj.CopyComplete
+C:\Users\jankm\source\repos\KartyWojna\Uczestnicy\obj\Debug\netstandard2.0\Uczestnicy.dll
+C:\Users\jankm\source\repos\KartyWojna\Uczestnicy\obj\Debug\netstandard2.0\Uczestnicy.pdb

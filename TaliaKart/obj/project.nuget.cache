@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "EpZI69U0ZiV3HZlmiu6bFF5eaG7rMVur0K31aSbAV8zeE9o4L9OYDgCseN+PmfEQ5mqmy8BM/gJ9WoZ35R2W8g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jankm\\source\\repos\\KartyWojna\\TaliaKart\\TaliaKart.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jankm\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\jankm\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

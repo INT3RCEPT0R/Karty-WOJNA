@@ -1,0 +1,14 @@
+C:\Users\jankm\source\repos\KartyWojna\Rozgrywka\bin\Debug\netstandard2.0\Rozgrywka.deps.json
+C:\Users\jankm\source\repos\KartyWojna\Rozgrywka\bin\Debug\netstandard2.0\Rozgrywka.dll
+C:\Users\jankm\source\repos\KartyWojna\Rozgrywka\bin\Debug\netstandard2.0\Rozgrywka.pdb
+C:\Users\jankm\source\repos\KartyWojna\Rozgrywka\bin\Debug\netstandard2.0\TaliaKart.dll
+C:\Users\jankm\source\repos\KartyWojna\Rozgrywka\bin\Debug\netstandard2.0\Uczestnicy.dll
+C:\Users\jankm\source\repos\KartyWojna\Rozgrywka\bin\Debug\netstandard2.0\TaliaKart.pdb
+C:\Users\jankm\source\repos\KartyWojna\Rozgrywka\bin\Debug\netstandard2.0\Uczestnicy.pdb
+C:\Users\jankm\source\repos\KartyWojna\Rozgrywka\obj\Debug\netstandard2.0\Rozgrywka.csprojAssemblyReference.cache
+C:\Users\jankm\source\repos\KartyWojna\Rozgrywka\obj\Debug\netstandard2.0\Rozgrywka.AssemblyInfoInputs.cache
+C:\Users\jankm\source\repos\KartyWojna\Rozgrywka\obj\Debug\netstandard2.0\Rozgrywka.AssemblyInfo.cs
+C:\Users\jankm\source\repos\KartyWojna\Rozgrywka\obj\Debug\netstandard2.0\Rozgrywka.csproj.CoreCompileInputs.cache
+C:\Users\jankm\source\repos\KartyWojna\Rozgrywka\obj\Debug\netstandard2.0\Rozgrywka.csproj.CopyComplete
+C:\Users\jankm\source\repos\KartyWojna\Rozgrywka\obj\Debug\netstandard2.0\Rozgrywka.dll
+C:\Users\jankm\source\repos\KartyWojna\Rozgrywka\obj\Debug\netstandard2.0\Rozgrywka.pdb

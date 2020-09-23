@@ -1,0 +1,65 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "KartyWojna/1.0.0": {
+        "dependencies": {
+          "Rozgrywka": "1.0.0",
+          "TaliaKart": "1.0.0",
+          "Uczestnicy": "1.0.0"
+        },
+        "runtime": {
+          "KartyWojna.dll": {}
+        }
+      },
+      "Rozgrywka/1.0.0": {
+        "dependencies": {
+          "TaliaKart": "1.0.0",
+          "Uczestnicy": "1.0.0"
+        },
+        "runtime": {
+          "Rozgrywka.dll": {}
+        }
+      },
+      "TaliaKart/1.0.0": {
+        "runtime": {
+          "TaliaKart.dll": {}
+        }
+      },
+      "Uczestnicy/1.0.0": {
+        "dependencies": {
+          "TaliaKart": "1.0.0"
+        },
+        "runtime": {
+          "Uczestnicy.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "KartyWojna/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Rozgrywka/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TaliaKart/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Uczestnicy/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

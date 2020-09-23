@@ -1,0 +1,138 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Rozgrywka/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "TaliaKart": "1.0.0",
+          "Uczestnicy": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Rozgrywka.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rozgrywka.dll": {}
+        }
+      },
+      "TaliaKart/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/TaliaKart.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TaliaKart.dll": {}
+        }
+      },
+      "Uczestnicy/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "TaliaKart": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Uczestnicy.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Uczestnicy.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Rozgrywka/1.0.0": {
+      "type": "project",
+      "path": "../Rozgrywka/Rozgrywka.csproj",
+      "msbuildProject": "../Rozgrywka/Rozgrywka.csproj"
+    },
+    "TaliaKart/1.0.0": {
+      "type": "project",
+      "path": "../TaliaKart/TaliaKart.csproj",
+      "msbuildProject": "../TaliaKart/TaliaKart.csproj"
+    },
+    "Uczestnicy/1.0.0": {
+      "type": "project",
+      "path": "../Uczestnicy/Uczestnicy.csproj",
+      "msbuildProject": "../Uczestnicy/Uczestnicy.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "Rozgrywka >= 1.0.0",
+      "TaliaKart >= 1.0.0",
+      "Uczestnicy >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\jankm\\.nuget\\packages\\": {},
+    "D:\\Microsoft\\Xamarin\\NuGet\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\jankm\\source\\repos\\KartyWojna\\KartyWojna\\KartyWojna.csproj",
+      "projectName": "KartyWojna",
+      "projectPath": "C:\\Users\\jankm\\source\\repos\\KartyWojna\\KartyWojna\\KartyWojna.csproj",
+      "packagesPath": "C:\\Users\\jankm\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jankm\\source\\repos\\KartyWojna\\KartyWojna\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\jankm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {
+            "C:\\Users\\jankm\\source\\repos\\KartyWojna\\Rozgrywka\\Rozgrywka.csproj": {
+              "projectPath": "C:\\Users\\jankm\\source\\repos\\KartyWojna\\Rozgrywka\\Rozgrywka.csproj"
+            },
+            "C:\\Users\\jankm\\source\\repos\\KartyWojna\\TaliaKart\\TaliaKart.csproj": {
+              "projectPath": "C:\\Users\\jankm\\source\\repos\\KartyWojna\\TaliaKart\\TaliaKart.csproj"
+            },
+            "C:\\Users\\jankm\\source\\repos\\KartyWojna\\Uczestnicy\\Uczestnicy.csproj": {
+              "projectPath": "C:\\Users\\jankm\\source\\repos\\KartyWojna\\Uczestnicy\\Uczestnicy.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

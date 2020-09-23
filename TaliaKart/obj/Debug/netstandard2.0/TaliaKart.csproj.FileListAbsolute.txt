@@ -1,0 +1,9 @@
+C:\Users\jankm\source\repos\KartyWojna\TaliaKart\obj\Debug\netstandard2.0\TaliaKart.csprojAssemblyReference.cache
+C:\Users\jankm\source\repos\KartyWojna\TaliaKart\obj\Debug\netstandard2.0\TaliaKart.AssemblyInfoInputs.cache
+C:\Users\jankm\source\repos\KartyWojna\TaliaKart\obj\Debug\netstandard2.0\TaliaKart.AssemblyInfo.cs
+C:\Users\jankm\source\repos\KartyWojna\TaliaKart\obj\Debug\netstandard2.0\TaliaKart.csproj.CoreCompileInputs.cache
+C:\Users\jankm\source\repos\KartyWojna\TaliaKart\bin\Debug\netstandard2.0\TaliaKart.deps.json
+C:\Users\jankm\source\repos\KartyWojna\TaliaKart\bin\Debug\netstandard2.0\TaliaKart.dll
+C:\Users\jankm\source\repos\KartyWojna\TaliaKart\bin\Debug\netstandard2.0\TaliaKart.pdb
+C:\Users\jankm\source\repos\KartyWojna\TaliaKart\obj\Debug\netstandard2.0\TaliaKart.dll
+C:\Users\jankm\source\repos\KartyWojna\TaliaKart\obj\Debug\netstandard2.0\TaliaKart.pdb
