@@ -25,7 +25,7 @@ namespace Uczestnicy
         }
         public override string ToString()
         {
-            return this.ID.ToString();
+            return "Gracz " + this.ID.ToString();
         }
 
     }
