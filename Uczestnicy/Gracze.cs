@@ -23,6 +23,10 @@ namespace Uczestnicy
             }
             Console.WriteLine();
         }
+        public override string ToString()
+        {
+            return this.ID.ToString();
+        }
 
     }
 }
