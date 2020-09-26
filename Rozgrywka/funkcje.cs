@@ -67,10 +67,14 @@ namespace Rozgrywka
 
                 int iloscpowtorzen = 0;
 
-                Console.WriteLine("Runda numer: " + runda);
+                Console.WriteLine("\nRunda numer: " + runda);
                 foreach (Gracz player in Players)
                 {
                     Console.WriteLine("Gracz {0} z {1} i ma {2} kart", player.ID, player.Cards[0].Name, player.Cards.Count);
+                    if(player.ID == 1)
+                    {
+                        funkcje.DecyzjaGracza();
+                    }
                 }
 
                 Card NajWyższaKarta = funkcje.SprawdźNajwyższąWartość(Players, 0, out iloscpowtorzen);
@@ -227,12 +231,15 @@ namespace Rozgrywka
 
             Console.WriteLine("Wygrywa gracz: " + AktualnieWygrywającyGracz.ID + " z kartą : " + AktualnaWartośćKarty.Name + " i wielkością talii " + AktualnieWygrywającyGracz.Cards.Count);
 
-            Console.WriteLine("KONIEC WOJNY!\n");
+            Console.WriteLine("KONIEC WOJNY!");
             return 0;
         }
 
         public static Card SprawdźNajwyższąWartość(List<Gracz> gracze, int NaPozycji, out int Powtórzenia)
         {
+
+            //Znalezienie najwyższej karty w talii graczy
+
             int MaxValue = 0;
             int Count = 0;
             foreach (Gracz gracz in gracze)
@@ -310,6 +317,14 @@ namespace Rozgrywka
             while (!CzyPodanoRundy);
 
             return trybgry;
+        }
+
+        public static int DecyzjaGracza()
+        {
+            Console.WriteLine("Co chcesz zrobić?");
+            Console.WriteLine("1 - Kontynuuj grę\n2 - Zakończ grę");
+            Console.ReadLine();
+            return 0;
         }
     }
 }
