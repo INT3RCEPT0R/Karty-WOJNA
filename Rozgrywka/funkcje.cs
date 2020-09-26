@@ -9,8 +9,9 @@ namespace Rozgrywka
     {
         public static Gracz AktualnieWygrywającyGracz = new Gracz();
         public static List<Gracz> graczedousuniecia = new List<Gracz>();
+        public static List<Card> stos = new List<Card>();
 
-        public static int Play(int limitrund, List<Gracz> Players)
+        public static List<Gracz> Play(int limitrund, List<Gracz> Players)
         {
             //Główna część programu, rozgrywka pomiędzy graczami
 
@@ -20,8 +21,7 @@ namespace Rozgrywka
             List<Gracz> wojnagraczy = new List<Gracz>();
 
             do
-            {
-                runda++;
+            {                
 
                 foreach (Gracz player in Players)                        //Usunięcie graczy którzy odpadli
                 {
@@ -37,7 +37,10 @@ namespace Rozgrywka
                 }
                 funkcje.graczedousuniecia.Clear();
 
-                if (runda > limitrund)                                  //Sprawdzenie warunków końca gry
+
+
+                runda++;                                                //Sprawdzenie warunków końca gry: limit rund, ilośc graczy
+                if (runda > limitrund)                                  
                 {
                     Console.WriteLine("Koniec tur!");
                     wygrana = true;
@@ -47,19 +50,20 @@ namespace Rozgrywka
                     Console.WriteLine("Pozostał ostatni gracz!");
                     wygrana = true;
                 }
-                funkcje.graczedousuniecia.Clear();
                 if (wygrana == true)
                 {
                     break;
                 }
 
-                if (runda % 25 == 0)
+
+                if (runda % 25 == 0)                                    //Po 25 rundach wymiesznie kart na rękach wszystkich graczy
                 {
                     foreach (Gracz player in Players)
                     {
                         player.Cards = Card.MixCards(player.Cards);
                     }
                 }
+
 
                 int iloscpowtorzen = 0;
 
@@ -117,7 +121,7 @@ namespace Rozgrywka
 
 
             } while (true);
-            return 0;
+            return Players;
         }
 
         public static short WywołajWojnę(List<Gracz> gracze, int poziomZagnieżdżenia)
@@ -125,7 +129,7 @@ namespace Rozgrywka
             Card AktualnaWartośćKarty = new Card();
             int iloscpowtorzen = 0;
             List<Gracz> wojnagraczy = new List<Gracz>();
-            List<Card> stos = new List<Card>();
+            
 
             Console.WriteLine("WOJNA!");
 
@@ -152,9 +156,7 @@ namespace Rozgrywka
                     {
                         stos.Add(karta);
                     }
-                    gracze.Remove(usun);
                 }
-                graczedousuniecia.Clear();
                 return 1;
             }
 
@@ -172,7 +174,7 @@ namespace Rozgrywka
             {
                 foreach (Gracz player in gracze)
                 {
-                    if (player.Cards[0].Value == NajWyższaKarta.Value)
+                    if (player.Cards[3 * poziomZagnieżdżenia -1].Value == NajWyższaKarta.Value)
                     {
                         wojnagraczy.Add(player);
                     }
@@ -183,13 +185,13 @@ namespace Rozgrywka
 
             foreach (Gracz gracz in gracze)
             {
-                if (gracz.Cards[2].Value == AktualnaWartośćKarty.Value)
+                if (gracz.Cards[3 * poziomZagnieżdżenia - 1].Value == AktualnaWartośćKarty.Value)
                 {
 
                 }
-                else if (gracz.Cards[2].Value > AktualnaWartośćKarty.Value)
+                else if (gracz.Cards[3 * poziomZagnieżdżenia - 1].Value > AktualnaWartośćKarty.Value)
                 {
-                    AktualnaWartośćKarty = gracz.Cards[2];
+                    AktualnaWartośćKarty = gracz.Cards[3 * poziomZagnieżdżenia - 1];
                     AktualnieWygrywającyGracz = gracz;
                 }
             }           

@@ -13,7 +13,7 @@ namespace KartyWojna
             int trybgry = funkcje.InicjalizacjaGry(out int limitrund);  //Pobranie zmiennych związanych z gra od użytkownika
 
             List<Gracz> Players = new List<Gracz>();                    //Inizjalizacja wszystkich graczy
-            for (int i = 0; i < trybgry; i++)
+            for (int i = 0; i < trybgry; i++)                           //Inicjalizacja odpowiedniej ilosci graczy
             {
                 Players.Add(new Gracz());
             }
@@ -30,7 +30,7 @@ namespace KartyWojna
                 j++;
             }
 
-            funkcje.Play(limitrund,Players);                             //Rozpoczęcie rozgrywki
+            Players = funkcje.Play(limitrund, Players);                    //Rozpoczęcie rozgrywki
 
             int wielkosctalii = 0;                                       //Podsumowanie skończonej gry
             int wygrany = 0;
