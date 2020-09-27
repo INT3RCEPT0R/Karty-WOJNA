@@ -23,26 +23,33 @@ namespace KartyWojna
             Talia.Cards = Card.MixCards(Talia.Cards);                   //Wymieszanie kart
 
             int j = 0;
-            foreach (Card card in Talia.Cards)                          //Rozdanie wszystkich kart pomiędzy graczy
+            foreach (Card card in Talia.Cards)                          
             {
                 if (j == trybgry) j = 0;
                 Players[j].Cards.Add(card);
                 j++;
-            }
+            }                       //Rozdanie wszystkich kart pomiędzy graczy
 
-            Players = funkcje.Play(limitrund, Players);                    //Rozpoczęcie rozgrywki
+            Players = funkcje.Play(limitrund, Players);                  //Rozpoczęcie rozgrywki
 
-            int wielkosctalii = 0;                                       //Podsumowanie skończonej gry
-            int wygrany = 0;
-            foreach (Gracz player in Players)
-            {
-                if (player.Cards.Count > wielkosctalii)
+            if(Players.Count != 0) {
+                int wielkosctalii = 0;                                       
+                int wygrany = 0;
+                foreach (Gracz player in Players)
                 {
-                    wielkosctalii = player.Cards.Count;
-                    wygrany = player.ID;
+                    if (player.Cards.Count > wielkosctalii)
+                    {
+                        wielkosctalii = player.Cards.Count;
+                        wygrany = player.ID;
+                    }
                 }
+                Console.WriteLine("\nWygrał gracz: " + wygrany + " z ilością kart: " + wielkosctalii); 
             }
-            Console.WriteLine("\nWygrał gracz: " + wygrany + " z ilością kart: " + wielkosctalii);  //Wynik końcowy
+            else
+            {
+                Console.WriteLine("Wszyscy przegrali!");
+            }                                                      //Podsumowanie skończonej gry
+
 
 
             Console.ReadKey();

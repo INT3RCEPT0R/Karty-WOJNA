@@ -7,8 +7,7 @@ using System.Linq.Expressions;
 namespace Rozgrywka
 {
     public static class funkcje
-    {
-        public static Gracz AktualnieWygrywającyGracz = new Gracz();
+    {        
         public static List<Gracz> graczedousuniecia = new List<Gracz>();
         public static List<Card> stos = new List<Card>();
 
@@ -20,12 +19,14 @@ namespace Rozgrywka
             int runda = 0;
             bool wygrana = false;
             int PlayerActivity = 0;
+            int iloscpowtorzen = 0;
             List<Gracz> wojnagraczy = new List<Gracz>();
+            Gracz AktualnieWygrywającyGracz = new Gracz();
 
             do
             {
 
-                foreach (Gracz player in Players)                        //Usunięcie graczy którzy odpadli
+                foreach (Gracz player in Players)                        
                 {
                     if (player.Cards.Count == 0)
                     {
@@ -36,12 +37,12 @@ namespace Rozgrywka
                 foreach (Gracz usun in funkcje.graczedousuniecia)
                 {
                     Players.Remove(usun);
-                }
+                }       //Usunięcie graczy którzy odpadli
                 funkcje.graczedousuniecia.Clear();
 
 
 
-                runda++;                                                //Sprawdzenie warunków końca gry: limit rund, ilośc graczy
+                runda++;                                                    //Sprawdzenie warunków końca gry: limit rund, ilośc graczy
                 if (runda > limitrund)
                 {
                     Console.WriteLine("Koniec tur!");
@@ -52,36 +53,39 @@ namespace Rozgrywka
                     Console.WriteLine("Pozostał ostatni gracz!");
                     wygrana = true;
                 }
+                else if(Players.Count < 1)
+                {
+                    Console.WriteLine("Wszyscy gracze przegrali!");
+                    wygrana = true;
+                }
                 if (wygrana == true)
                 {
                     break;
                 }
 
 
-                if (runda % 25 == 0)                                    //Po 25 rundach wymiesznie kart na rękach wszystkich graczy
+                if (runda % 25 == 0)                                    
                 {
                     foreach (Gracz player in Players)
                     {
                         player.Cards = Card.MixCards(player.Cards);
                     }
-                }
+                }                                       //Po 25 rundach wymiesznie kart na rękach wszystkich graczy
 
-
-                int iloscpowtorzen = 0;
-
+                
                 Console.WriteLine("\nRunda numer: " + runda);
-                foreach (Gracz player in Players)                           //Wyłożenie kart przez wszystkich graczy i aktywność użytkownika
+                foreach (Gracz player in Players)                           
                 {
                     Console.WriteLine("Gracz {0} z {1} i ma {2} kart", player.ID, player.Cards[0].Name, player.Cards.Count);
                     if (player.ID == 1)
                     {
                         PlayerActivity = funkcje.DecyzjaGracza();
                     }
-                }
-                if(PlayerActivity == 2)
+                }                           //Wyłożenie kart przez wszystkich graczy i aktywność użytkownika
+                if (PlayerActivity == 2)
                 {
                     break;
-                }
+                }                                   //Aktywność gracza
 
                 Card NajWyższaKarta = funkcje.SprawdźNajwyższąWartość(Players, 0, out iloscpowtorzen);         //Sprawdzenie najwyższej karty
 
@@ -91,7 +95,7 @@ namespace Rozgrywka
 
 
 
-                if (iloscpowtorzen != 1)                                                                        //Sprawdzenie powtarzających się kart i wywołanie wojny lub normalna runda
+                if (iloscpowtorzen != 1)                                                                        
                 {
                     foreach (Gracz player in Players)
                     {
@@ -102,24 +106,24 @@ namespace Rozgrywka
                     }
                     funkcje.WywołajWojnę(wojnagraczy, 1);
                     wojnagraczy.Clear();
-                }
+                }                                   //Sprawdzenie powtarzających się kart i wywołanie wojny lub normalna runda
                 else
                 {
                     foreach (Gracz player in Players)
                     {
                         if (player.Cards[0].Value == NajWyższaKarta.Value)
                         {
-                            funkcje.AktualnieWygrywającyGracz = player;
+                            AktualnieWygrywającyGracz = player;
                         }
                     }
 
                     foreach (Gracz player in Players)
                     {
-                        if (player != funkcje.AktualnieWygrywającyGracz)
+                        if (player != AktualnieWygrywającyGracz)
                         {
                             if (player.Cards.Count != 0)
                             {
-                                funkcje.AktualnieWygrywającyGracz.Cards.Add(player.Cards[0]);
+                                AktualnieWygrywającyGracz.Cards.Add(player.Cards[0]);
                                 player.Cards.RemoveAt(0);
                             }
                         }
@@ -130,9 +134,9 @@ namespace Rozgrywka
                         }
 
                     }
-                    Console.WriteLine("Wygrywa gracz: " + funkcje.AktualnieWygrywającyGracz.ID + " i ma " + funkcje.AktualnieWygrywającyGracz.Cards.Count + " karty!\n");
-                }
-
+                    Console.WriteLine("Wygrywa gracz: " + AktualnieWygrywającyGracz.ID + " i ma " + AktualnieWygrywającyGracz.Cards.Count + " karty!\n");
+                }                                                       //W przeciwnym wypadku przerowadź zwykłą potyczkę
+                    
 
             } while (true);
             return Players;                                                         //Zwrócenie listy graczy
@@ -140,10 +144,14 @@ namespace Rozgrywka
 
         public static short WywołajWojnę(List<Gracz> gracze, int poziomZagnieżdżenia)
         {
-            Card AktualnaWartośćKarty = new Card();
+
+            //
+            //W przypadku remisu, gracze kładą po jednej karcie zakrytej. A następnie odkryte które są porównywane.
+            //
+
             int iloscpowtorzen = 0;
             List<Gracz> wojnagraczy = new List<Gracz>();
-
+            Gracz AktualnieWygrywającyGracz = new Gracz();
 
             Console.WriteLine("WOJNA!");
 
@@ -155,7 +163,7 @@ namespace Rozgrywka
                     graczedousuniecia.Add(gracz);
                 }
 
-            }
+            }                                     //Gracze którzy nie mają odpowiedniej ilości kart przegrywają
             foreach (Gracz usun in graczedousuniecia)
             {
                 gracze.Remove(usun);
@@ -172,19 +180,18 @@ namespace Rozgrywka
                     }
                 }
                 return 1;
-            }
-
+            }                                               //W przypadku gdy wszyscy gracze mają za mało kart. Wojna się kończy a karty odkładane sa na stos.
 
             foreach (Gracz player in gracze)
             {
                 Console.WriteLine("Gracz {0} z {1} i ma {2} kart", player.ID, player.Cards[3 * poziomZagnieżdżenia - 1].Name, player.Cards.Count);
-            }
-
-            Card NajWyższaKarta = funkcje.SprawdźNajwyższąWartość(gracze, poziomZagnieżdżenia * 3 - 1, out iloscpowtorzen);
+            }                                       //Gracze którzy biora udział w grze ukazują karty
+                
+            Card NajWyższaKarta = funkcje.SprawdźNajwyższąWartość(gracze, poziomZagnieżdżenia * 3 - 1, out iloscpowtorzen); //Sprawdzanie najwyższej karty w zestawieniu
 
             Console.WriteLine("Najwyższa karta w tej rundzie to: " + NajWyższaKarta.Name + " i powtórzyła się {0} razy", iloscpowtorzen);
 
-            if (iloscpowtorzen != 1)
+            if (iloscpowtorzen != 1)                                                    
             {
                 foreach (Gracz player in gracze)
                 {
@@ -195,20 +202,13 @@ namespace Rozgrywka
                 }
                 funkcje.WywołajWojnę(wojnagraczy, poziomZagnieżdżenia + 1);
                 wojnagraczy.Clear();
-            }
+            }                                               //W przypadku remisu kolejne wywołanie wojny po przez rekurencję
 
             foreach (Gracz gracz in gracze)
             {
-                if (gracz.Cards[3 * poziomZagnieżdżenia - 1].Value == AktualnaWartośćKarty.Value)
-                {
-
-                }
-                else if (gracz.Cards[3 * poziomZagnieżdżenia - 1].Value > AktualnaWartośćKarty.Value)
-                {
-                    AktualnaWartośćKarty = gracz.Cards[3 * poziomZagnieżdżenia - 1];
+                if(gracz.Cards[3 * poziomZagnieżdżenia - 1] == NajWyższaKarta)
                     AktualnieWygrywającyGracz = gracz;
-                }
-            }
+            }                               //Zebranie informacji o wygrywającym
 
             foreach (Gracz gracz in gracze)
             {
@@ -231,15 +231,15 @@ namespace Rozgrywka
                         gracz.Cards.RemoveAt(0);
                     }
                 }
-            }
+            }                           //Zebranie kart od przegrany i dodanie ich wygranemu
 
-            foreach (Card karta in stos)
+            foreach (Card karta in stos)                                        
             {
                 AktualnieWygrywającyGracz.Cards.Add(karta);
-            }
+            }                           //Dodanie kart z stosu graczy który odpadli z gry
             stos.Clear();
 
-            Console.WriteLine("Wygrywa gracz: " + AktualnieWygrywającyGracz.ID + " z kartą : " + AktualnaWartośćKarty.Name + " i wielkością talii " + AktualnieWygrywającyGracz.Cards.Count);
+            Console.WriteLine("Wygrywa gracz: " + AktualnieWygrywającyGracz.ID + " z kartą : " + NajWyższaKarta.Name + " i wielkością talii " + AktualnieWygrywającyGracz.Cards.Count);
 
             Console.WriteLine("KONIEC WOJNY!");
             return 0;
@@ -320,6 +320,10 @@ namespace Rozgrywka
 
                 if (CzyPodanoLiczbę)
                 {
+                    if (limitrund < 0)
+                    {
+                        limitrund = -limitrund;
+                    }
                     CzyPodanoRundy = true;
                 }
                 else
