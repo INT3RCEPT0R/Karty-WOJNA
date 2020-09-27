@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 namespace Uczestnicy
 {
+    //
+    // Klasa pojedynczego gracza biorącego udział w rozgrywce
+    //
     public class Gracz
     {
         public int ID { get; }

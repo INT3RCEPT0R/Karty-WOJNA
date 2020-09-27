@@ -2,6 +2,7 @@
 using Uczestnicy;
 using TaliaKart;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 
 namespace Rozgrywka
 {
@@ -18,10 +19,11 @@ namespace Rozgrywka
             //Inicjzalizowanie zmiennych do rozgrywki
             int runda = 0;
             bool wygrana = false;
+            int PlayerActivity = 0;
             List<Gracz> wojnagraczy = new List<Gracz>();
 
             do
-            {                
+            {
 
                 foreach (Gracz player in Players)                        //Usunięcie graczy którzy odpadli
                 {
@@ -40,7 +42,7 @@ namespace Rozgrywka
 
 
                 runda++;                                                //Sprawdzenie warunków końca gry: limit rund, ilośc graczy
-                if (runda > limitrund)                                  
+                if (runda > limitrund)
                 {
                     Console.WriteLine("Koniec tur!");
                     wygrana = true;
@@ -68,20 +70,28 @@ namespace Rozgrywka
                 int iloscpowtorzen = 0;
 
                 Console.WriteLine("\nRunda numer: " + runda);
-                foreach (Gracz player in Players)
+                foreach (Gracz player in Players)                           //Wyłożenie kart przez wszystkich graczy i aktywność użytkownika
                 {
                     Console.WriteLine("Gracz {0} z {1} i ma {2} kart", player.ID, player.Cards[0].Name, player.Cards.Count);
-                    if(player.ID == 1)
+                    if (player.ID == 1)
                     {
-                        funkcje.DecyzjaGracza();
+                        PlayerActivity = funkcje.DecyzjaGracza();
                     }
                 }
+                if(PlayerActivity == 2)
+                {
+                    break;
+                }
 
-                Card NajWyższaKarta = funkcje.SprawdźNajwyższąWartość(Players, 0, out iloscpowtorzen);
+                Card NajWyższaKarta = funkcje.SprawdźNajwyższąWartość(Players, 0, out iloscpowtorzen);         //Sprawdzenie najwyższej karty
+
+
 
                 Console.WriteLine("Najwyższa karta w tej rundzie to: " + NajWyższaKarta.Name + " i powtórzyła się {0} razy", iloscpowtorzen);
 
-                if (iloscpowtorzen != 1)
+
+
+                if (iloscpowtorzen != 1)                                                                        //Sprawdzenie powtarzających się kart i wywołanie wojny lub normalna runda
                 {
                     foreach (Gracz player in Players)
                     {
@@ -125,7 +135,7 @@ namespace Rozgrywka
 
 
             } while (true);
-            return Players;
+            return Players;                                                         //Zwrócenie listy graczy
         }
 
         public static short WywołajWojnę(List<Gracz> gracze, int poziomZagnieżdżenia)
@@ -133,13 +143,13 @@ namespace Rozgrywka
             Card AktualnaWartośćKarty = new Card();
             int iloscpowtorzen = 0;
             List<Gracz> wojnagraczy = new List<Gracz>();
-            
+
 
             Console.WriteLine("WOJNA!");
 
             foreach (Gracz gracz in gracze)
             {
-                if (gracz.Cards.Count< 3*poziomZagnieżdżenia)
+                if (gracz.Cards.Count < 3 * poziomZagnieżdżenia)
                 {
                     Console.WriteLine("Gracz: " + gracz.ID + " odpada z gry.");
                     graczedousuniecia.Add(gracz);
@@ -151,7 +161,7 @@ namespace Rozgrywka
                 gracze.Remove(usun);
             }
 
-            if(gracze.Count == 0)
+            if (gracze.Count == 0)
             {
                 Console.WriteLine("WOJNA NIE UDANA!\n");
                 foreach (Gracz usun in graczedousuniecia)
@@ -167,10 +177,10 @@ namespace Rozgrywka
 
             foreach (Gracz player in gracze)
             {
-                Console.WriteLine("Gracz {0} z {1} i ma {2} kart", player.ID, player.Cards[3 * poziomZagnieżdżenia -1].Name, player.Cards.Count);
+                Console.WriteLine("Gracz {0} z {1} i ma {2} kart", player.ID, player.Cards[3 * poziomZagnieżdżenia - 1].Name, player.Cards.Count);
             }
 
-            Card NajWyższaKarta = funkcje.SprawdźNajwyższąWartość(gracze, poziomZagnieżdżenia*3-1, out iloscpowtorzen);
+            Card NajWyższaKarta = funkcje.SprawdźNajwyższąWartość(gracze, poziomZagnieżdżenia * 3 - 1, out iloscpowtorzen);
 
             Console.WriteLine("Najwyższa karta w tej rundzie to: " + NajWyższaKarta.Name + " i powtórzyła się {0} razy", iloscpowtorzen);
 
@@ -178,12 +188,12 @@ namespace Rozgrywka
             {
                 foreach (Gracz player in gracze)
                 {
-                    if (player.Cards[3 * poziomZagnieżdżenia -1].Value == NajWyższaKarta.Value)
+                    if (player.Cards[3 * poziomZagnieżdżenia - 1].Value == NajWyższaKarta.Value)
                     {
                         wojnagraczy.Add(player);
                     }
                 }
-                funkcje.WywołajWojnę(wojnagraczy, poziomZagnieżdżenia+1);
+                funkcje.WywołajWojnę(wojnagraczy, poziomZagnieżdżenia + 1);
                 wojnagraczy.Clear();
             }
 
@@ -198,7 +208,7 @@ namespace Rozgrywka
                     AktualnaWartośćKarty = gracz.Cards[3 * poziomZagnieżdżenia - 1];
                     AktualnieWygrywającyGracz = gracz;
                 }
-            }           
+            }
 
             foreach (Gracz gracz in gracze)
             {
@@ -286,7 +296,11 @@ namespace Rozgrywka
 
                 if (CzyPodanoLiczbę)
                 {
-                    Console.WriteLine("Liczba graczy: " + trybgry);
+                    if (trybgry < 0)
+                    {
+                        trybgry = -trybgry;
+                    }
+                    Console.WriteLine("Liczba graczy: " + trybgry);                    
                     CzyWybranoTryb = true;
                 }
                 else
@@ -321,10 +335,28 @@ namespace Rozgrywka
 
         public static int DecyzjaGracza()
         {
+            int odpowiedz;
+            bool wyjdz = true;
             Console.WriteLine("Co chcesz zrobić?");
             Console.WriteLine("1 - Kontynuuj grę\n2 - Zakończ grę");
-            Console.ReadLine();
-            return 0;
+            do
+            {
+                bool czyliczba = int.TryParse(Console.ReadLine(), out odpowiedz);
+                switch (odpowiedz)
+                {
+                    case 1:
+                        wyjdz = false;
+                        break;
+                    case 2:
+                        wyjdz = false;
+                        break;
+                    default:
+                        Console.WriteLine("Podaj prawidłową wartość!");
+                        break;
+                }
+            }
+            while (wyjdz);
+            return odpowiedz;
         }
     }
 }
