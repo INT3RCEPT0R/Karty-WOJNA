@@ -77,15 +77,32 @@ namespace Rozgrywka
                 foreach (Gracz player in Players)                           
                 {
                     Console.WriteLine("Gracz {0} z {1} i ma {2} kart", player.ID, player.Cards[0].Name, player.Cards.Count);
-                    if (player.ID == 1)
+                }                                                               //Wyłożenie kart przez wszystkich graczy i aktywność użytkownika
+                if (Players.Exists(Player => Player.ID == 1))
+                {
+                    do
                     {
                         PlayerActivity = funkcje.DecyzjaGracza();
+                        if (PlayerActivity == 2 || PlayerActivity == 1)
+                        {
+                            break;
+                        }else if(PlayerActivity == 3)
+                        {
+                            Players[0].ShowHand();
+                        }
+                        else if (PlayerActivity == 4)
+                        {                            
+                            Players[0].Cards = TaliaKart.Card.MixCards(Players[0].Cards);
+                            Console.WriteLine();
+                        }
                     }
-                }                           //Wyłożenie kart przez wszystkich graczy i aktywność użytkownika
-                if (PlayerActivity == 2)
-                {
-                    break;
-                }                                   //Aktywność gracza
+                    while (true);
+
+                    if (PlayerActivity == 2)
+                    {
+                        break;
+                    }
+                }                                                                   //Aktywność gracza
 
                 Card NajWyższaKarta = funkcje.SprawdźNajwyższąWartość(Players, 0, out iloscpowtorzen);         //Sprawdzenie najwyższej karty
 
@@ -342,7 +359,7 @@ namespace Rozgrywka
             int odpowiedz;
             bool wyjdz = true;
             Console.WriteLine("Co chcesz zrobić?");
-            Console.WriteLine("1 - Kontynuuj grę\n2 - Zakończ grę");
+            Console.WriteLine("1 - Kontynuuj grę\n2 - Zakończ grę\n3 - Zobacz karty na ręce\n4 - Przetasuj karty na ręce");
             do
             {
                 bool czyliczba = int.TryParse(Console.ReadLine(), out odpowiedz);
@@ -352,6 +369,12 @@ namespace Rozgrywka
                         wyjdz = false;
                         break;
                     case 2:
+                        wyjdz = false;
+                        break;
+                    case 3:
+                        wyjdz = false;
+                        break;
+                    case 4:
                         wyjdz = false;
                         break;
                     default:
