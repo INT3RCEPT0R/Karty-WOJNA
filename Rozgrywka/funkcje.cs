@@ -300,7 +300,7 @@ namespace Rozgrywka
             //Powitanie i pobranie parametrów związanych z grą
             //
 
-            Console.WriteLine("Witam w grze karcianej o nazwie \"WOJNA!\"");
+            Console.WriteLine("Witam w grze karcianej o nazwie \"WOJNA!\"\nGrasz jako gracz nr 1!\n");
 
             bool CzyWybranoTryb = false;
             int trybgry;
@@ -311,18 +311,14 @@ namespace Rozgrywka
 
                 bool CzyPodanoLiczbę = Int32.TryParse(Console.ReadLine(), out trybgry);
 
-                if (CzyPodanoLiczbę)
+                if (CzyPodanoLiczbę && trybgry > 1)
                 {
-                    if (trybgry < 0)
-                    {
-                        trybgry = -trybgry;
-                    }
                     Console.WriteLine("Liczba graczy: " + trybgry);                    
                     CzyWybranoTryb = true;
                 }
                 else
                 {
-                    Console.WriteLine("To nie liczba!");
+                    Console.WriteLine("Niepoprawna wartość!");
                 }
                 Console.WriteLine("");
             }
@@ -335,7 +331,7 @@ namespace Rozgrywka
                 Console.WriteLine("Podaj limit rund");
                 bool CzyPodanoLiczbę = Int32.TryParse(Console.ReadLine(), out limitrund);
 
-                if (CzyPodanoLiczbę)
+                if (CzyPodanoLiczbę && limitrund != 0)
                 {
                     if (limitrund < 0)
                     {
@@ -345,7 +341,7 @@ namespace Rozgrywka
                 }
                 else
                 {
-                    Console.WriteLine("To nie liczba!");
+                    Console.WriteLine("Nieprawidłowa wartość!");
                 }
                 Console.WriteLine("");
             }
