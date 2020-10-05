@@ -2,30 +2,16 @@
 
 .NET C#
 
-Gra karciana wojna wykonana w konsoli.
+Gra karciana "WOJNA" wykonana w konsoli.
 
-## Installation
+## Instalacja
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
-```bash
-pip install foobar
-```
+Ściągnąć i uruchomić w Visual Studio
 
 ## Usage
 
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
-
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
+Użytkownik wpierw podaje ilość graczy, gdzie sam jest graczem numer jeden. Następnie podaje ilość maksymalną ilość rund do zakończenia rozgrywki. Na poczatku każdej tury wszyscy gracze pokazują swoje kart.
+A następnie użytkownik jako gracz numer jeden podejmuje decyzję o: kontynuacji, zakończenia rozgrywki, potasowaniu swoich kart, sprawdzeniu swoich kart. Wygrywa ostatni gracz z kartami na rence. 
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+ None
