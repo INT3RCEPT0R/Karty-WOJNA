@@ -1,8 +1,8 @@
 # Karty-WOJNA
 
 .NET C#
-
-Gra karciana "WOJNA" wykonana w konsoli.
+Autorski projekt
+Gra karciana "WOJNA" wykonana w konsoli
 
 ## Instalacja
 
@@ -14,4 +14,6 @@ Użytkownik wpierw podaje ilość graczy, gdzie sam jest graczem numer jeden. Na
 A następnie użytkownik jako gracz numer jeden podejmuje decyzję o: kontynuacji, zakończenia rozgrywki, potasowaniu swoich kart, sprawdzeniu swoich kart. Wygrywa ostatni gracz z kartami na ręce. 
 
 ## License
+
  None
+ 
